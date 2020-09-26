@@ -1,30 +1,18 @@
-const HDWalletProvider = require('@truffle/hdwallet-provider')
+const { mnemonic, secret, password, email } = require("./faucet.json");
 
 module.exports = {
+  // see <http://truffleframework.com/docs/advanced/configuration>
+  // for more details on how to specify configuration options!
   networks: {
-    cldev: {
-      host: '127.0.0.1',
-      port: 8545,
-      network_id: '*',
-    },
-    ganache: {
-      host: '127.0.0.1',
-      port: 7545,
-      network_id: '*',
-    },
-    live: {
-      provider: () => {
-        return new HDWalletProvider(process.env.MNEMONIC, process.env.RPC_URL)
-      },
-      network_id: '*',
-      // ~~Necessary due to https://github.com/trufflesuite/truffle/issues/1971~~
-      // Necessary due to https://github.com/trufflesuite/truffle/issues/3008
-      skipDryRun: true,
-    },
-  },
-  compilers: {
-    solc: {
-      version: '0.6.6',
-    },
-  },
-}
+    development: {
+      host: "https://carthagenet.smartpy.io",
+      port: 443,
+      network_id: "*",
+      secret,
+      mnemonic,
+      password,
+      email,
+      type: "tezos"
+    }
+  }
+};

@@ -1,0 +1,24 @@
+{
+    "mnemonic": [
+      "blue",
+      "cover",
+      "example",
+      "little",
+      "drama",
+      "sing",
+      "voice",
+      "damp",
+      "inform",
+      "glass",
+      "awake",
+      "survey",
+      "treat",
+      "mule",
+      "endorse"
+    ],
+    "secret": "7a1a8df9762d746044cf1568ad7990deb4f3e472",
+    "amount": "9698375177",
+    "pkh": "tz1XL5BUNtB1RVg4h5C64gfncafTKYoRebsH",
+    "password": "U1KvHO0dvS",
+    "email": "xrbaqeev.itmrveki@tezos.example.org"
+  }
